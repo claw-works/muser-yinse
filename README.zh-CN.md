@@ -70,7 +70,7 @@ index.json           全部乐器的清单（scripts/index.py 生成）
 - 不放录音本身（`.gitignore` 挡掉了常见的音频格式）。
 - 提交前跑一遍 `muser yinse compare`，把平均频谱差写进 `meta.json`。
 
-添加乐器的步骤见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+添加乐器的步骤见 [CONTRIBUTING.zh-CN.md](CONTRIBUTING.zh-CN.md)。
 
 ## 许可证
 
