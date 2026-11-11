@@ -18,6 +18,16 @@
    muser yinse compare instruments/strike/yangqin/yangqin.yinse.json ~/recordings/yangqin
    ```
 
+   From an SFZ library with a suitable license, muser can play the notes itself (and measure the dampers):
+   音色库是 SFZ 且许可证合适时，可以让 muser 自己演奏来提取（顺便量制音器）：
+
+   ```bash
+   mkdir -p instruments/strike/grand-piano
+   muser yinse extract --from "sfz:/path/SalamanderGrandPiano-V3+20200602.sfz" --pitches 21-108/3 --velocities 0.3,0.6,0.9 --hold 6 \
+     --notes-dir /tmp/piano-notes -o instruments/strike/grand-piano/grand-piano.yinse.json --name "Grand Piano (Salamander, Yamaha C5)"
+   muser yinse compare instruments/strike/grand-piano/grand-piano.yinse.json /tmp/piano-notes
+   ```
+
 3. **meta.json** next to it (fields in the README), and a README.md for anything a player should know.
    在旁边写 `meta.json`（字段见 README），需要说明的写进 README.md。
 

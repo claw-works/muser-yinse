@@ -1,3 +1,17 @@
 {
-  "instruments": []
+  "instruments": [
+    {
+      "spec": "yinse:strike/grand-piano",
+      "name": "grand-piano",
+      "zh": "三角钢琴",
+      "description": "Yamaha C5 grand piano, two AKG C414 in AB about 12 cm above the strings; dampers (notes stop on release, the sustain pedal holds them)",
+      "license": "CC-BY-3.0",
+      "range": [
+        21,
+        108
+      ],
+      "articulations": [],
+      "kb": 428
+    }
+  ]
 }

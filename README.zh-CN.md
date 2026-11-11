@@ -13,11 +13,19 @@ export MUSER_YINSE_PATH=/path/to/muser-yinse        # 可以用路径分隔符�
 ```
 
 ```json
-{ "instrument": "yinse:strike/yangqin" }
+{ "instrument": "yinse:strike/grand-piano" }
 ```
 
 `yinse:<类>/<名>` 在 `MUSER_YINSE_PATH` 的每个库里找 `instruments/<类>/<名>/<名>.yinse.json`。也可以直接写文件路径。
-`muser instruments yinse:strike/yangqin` 看音域和有哪些演奏法。
+`muser instruments yinse:strike/grand-piano` 看音域和有哪些演奏法。
+
+## 乐器
+
+| 写法 | 乐器 | 音域 | 录音来源 · 许可证 |
+|---|---|---|---|
+| `yinse:strike/grand-piano` | [三角钢琴](instruments/strike/grand-piano/)（雅马哈 C5，有制音器） | A0-C8 | Alexander Holm 的 Salamander Grand Piano · CC BY 3.0 |
+
+带演奏法的完整清单在 [index.json](index.json)。
 
 ## 目录
 
@@ -38,17 +46,17 @@ index.json           全部乐器的清单（scripts/index.py 生成）
 
 ```json
 {
-  "name": "yangqin",
-  "zh": "扬琴",
+  "name": "grand-piano",
+  "zh": "三角钢琴",
   "family": "strike",
-  "description": "402 型扬琴，竹槌，干声",
+  "description": "Yamaha C5 grand piano, two AKG C414 in AB about 12 cm above the strings; dampers",
   "source": {
-    "title": "录音集的名字",
-    "url": "https://…",
-    "author": "录音的作者",
-    "license": "CC0-1.0"
+    "title": "Salamander Grand Piano V3 (FreePats SFZ+FLAC 20200602)",
+    "url": "https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html",
+    "author": "Alexander Holm",
+    "license": "CC-BY-3.0"
   },
-  "extracted": { "muser": "0.6.0", "date": "2026-11-11", "recordings": 39, "compare_db": 2.6 }
+  "extracted": { "muser": "0.6.0", "date": "2026-11-11", "recordings": 90, "compare_db": 3.77, "command": "muser yinse extract --from sfz:… --pitches 21-108/3 …" }
 }
 ```
 

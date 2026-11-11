@@ -1,0 +1,19 @@
+{
+  "name": "grand-piano",
+  "zh": "三角钢琴",
+  "family": "strike",
+  "description": "Yamaha C5 grand piano, two AKG C414 in AB about 12 cm above the strings; dampers (notes stop on release, the sustain pedal holds them)",
+  "source": {
+    "title": "Salamander Grand Piano V3 (FreePats SFZ+FLAC 20200602)",
+    "url": "https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html",
+    "author": "Alexander Holm",
+    "license": "CC-BY-3.0"
+  },
+  "extracted": {
+    "muser": "0.6.0",
+    "date": "2026-11-11",
+    "recordings": 90,
+    "compare_db": 3.77,
+    "command": "muser yinse extract --from sfz:SalamanderGrandPiano-V3+20200602.sfz --pitches 21-108/3 --velocities 0.3,0.6,0.9 --hold 6"
+  }
+}

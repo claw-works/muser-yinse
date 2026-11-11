@@ -14,11 +14,19 @@ export MUSER_YINSE_PATH=/path/to/muser-yinse        # several libraries with the
 ```
 
 ```json
-{ "instrument": "yinse:strike/yangqin" }
+{ "instrument": "yinse:strike/grand-piano" }
 ```
 
 `yinse:<family>/<name>` looks for `instruments/<family>/<name>/<name>.yinse.json` in every library on `MUSER_YINSE_PATH`;
-a file path works too. `muser instruments yinse:strike/yangqin` shows its range and articulations.
+a file path works too. `muser instruments yinse:strike/grand-piano` shows its range and articulations.
+
+## Instruments
+
+| spec | instrument | range | source · license |
+|---|---|---|---|
+| `yinse:strike/grand-piano` | [Grand piano](instruments/strike/grand-piano/) (Yamaha C5, dampers) | A0-C8 | Salamander Grand Piano by Alexander Holm · CC BY 3.0 |
+
+The full list with articulations is in [index.json](index.json).
 
 ## Layout
 
@@ -39,12 +47,17 @@ Only sounds that are struck or plucked and ring away by themselves: the extracti
 
 ```json
 {
-  "name": "yangqin",
-  "zh": "扬琴",
+  "name": "grand-piano",
+  "zh": "三角钢琴",
   "family": "strike",
-  "description": "402 yangqin, bamboo hammers, dry",
-  "source": { "title": "name of the recording set", "url": "https://…", "author": "who recorded it", "license": "CC0-1.0" },
-  "extracted": { "muser": "0.6.0", "date": "2026-11-11", "recordings": 39, "compare_db": 2.6 }
+  "description": "Yamaha C5 grand piano, two AKG C414 in AB about 12 cm above the strings; dampers",
+  "source": {
+    "title": "Salamander Grand Piano V3 (FreePats SFZ+FLAC 20200602)",
+    "url": "https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html",
+    "author": "Alexander Holm",
+    "license": "CC-BY-3.0"
+  },
+  "extracted": { "muser": "0.6.0", "date": "2026-11-11", "recordings": 90, "compare_db": 3.77, "command": "muser yinse extract --from sfz:… --pitches 21-108/3 …" }
 }
 ```
 
