@@ -9,9 +9,11 @@ attack noise, articulations), no audio: tens to a couple of hundred KB.
 ## Use
 
 ```bash
-git clone https://github.com/claw-works/muser-yinse.git
-export MUSER_YINSE_PATH=/path/to/muser-yinse        # several libraries with the path separator
+muser yinse search                       # what is here
+muser yinse install strike/grand-piano   # install one into this machine's yinse library
 ```
+
+Or the whole library: `git clone` this repository and put it on `MUSER_YINSE_PATH` (several libraries with the path separator).
 
 ```json
 { "instrument": "yinse:strike/grand-piano" }

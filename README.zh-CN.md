@@ -8,9 +8,11 @@
 ## 用法
 
 ```bash
-git clone https://github.com/claw-works/muser-yinse.git
-export MUSER_YINSE_PATH=/path/to/muser-yinse        # 可以用路径分隔符写多个库
+muser yinse search                       # 看这里有哪些
+muser yinse install strike/grand-piano   # 装一件到本机的 yinse 音色库
 ```
+
+也可以用整个库：`git clone` 这个仓库，把它放进 `MUSER_YINSE_PATH`（可以用路径分隔符写多个库）。
 
 ```json
 { "instrument": "yinse:strike/grand-piano" }
