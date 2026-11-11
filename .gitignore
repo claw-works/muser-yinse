@@ -1,0 +1,9 @@
+# 录音、渲染、本机测试：不进仓库（乐器只放提取出的 .yinse.json 和说明）。
+*.wav
+*.flac
+*.aif
+*.aiff
+*.ogg
+*.mp3
+local/
+.DS_Store
