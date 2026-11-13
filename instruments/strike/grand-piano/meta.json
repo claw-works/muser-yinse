@@ -13,7 +13,8 @@
     "muser": "0.6.0",
     "date": "2026-11-11",
     "recordings": 90,
-    "compare_db": 3.77,
-    "command": "muser yinse extract --from sfz:SalamanderGrandPiano-V3+20200602.sfz --pitches 21-108/3 --velocities 0.3,0.6,0.9 --hold 6"
+    "compare_db": 2.66,
+    "command": "muser yinse extract --from sfz:SalamanderGrandPiano-V3+20200602.sfz --pitches 21-108/3 --velocities 0.3,0.6,0.9 --hold 6",
+    "table_version": 2
   }
 }

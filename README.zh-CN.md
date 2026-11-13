@@ -3,7 +3,7 @@
 [English](README.md) | 简体中文
 
 [muser](https://github.com/claw-works/muser) 的音色库：从录音里提取出来的模态乐器（`*.yinse.json`）。
-每件乐器只是一张张分音表（频率、两段衰减、一组弦之间的拍、左右声道、起音噪声、演奏法），没有音频，几十到一两百 KB。
+每件乐器只是一张张分音表（频率、两段衰减、一组弦之间的拍、左右声道、起音的相位、分频段的起音噪声、演奏法），没有音频，几十到几百 KB。
 
 ## 用法
 
@@ -42,7 +42,7 @@ instruments/
 index.json           全部乐器的清单（scripts/index.py 生成）
 ```
 
-只收敲一下、拨一下就自己衰减的乐器：提取方法不适合吹管、拉弦这类持续发声的声音。
+只收敲一下、拨一下就自己衰减的乐器（分音不必成整数倍：钟、木琴、鼓也可以）：提取方法不适合吹管、拉弦这类持续发声的声音。
 
 ## meta.json
 
@@ -58,7 +58,7 @@ index.json           全部乐器的清单（scripts/index.py 生成）
     "author": "Alexander Holm",
     "license": "CC-BY-3.0"
   },
-  "extracted": { "muser": "0.6.0", "date": "2026-11-11", "recordings": 90, "compare_db": 3.77, "command": "muser yinse extract --from sfz:… --pitches 21-108/3 …" }
+  "extracted": { "muser": "0.6.0", "date": "2026-11-11", "recordings": 90, "compare_db": 2.66, "table_version": 2, "command": "muser yinse extract --from sfz:… --pitches 21-108/3 …" }
 }
 ```
 
@@ -72,7 +72,7 @@ index.json           全部乐器的清单（scripts/index.py 生成）
 - 不放录音本身（`.gitignore` 挡掉了常见的音频格式）。
 - 提交前跑一遍 `muser yinse compare`，把平均频谱差写进 `meta.json`。
 
-添加乐器的步骤见 [CONTRIBUTING.zh-CN.md](CONTRIBUTING.zh-CN.md)。
+添加乐器的步骤见 [CONTRIBUTING.zh-CN.md](CONTRIBUTING.zh-CN.md)。该录什么、录多少：[docs/sampling.zh-CN.md](docs/sampling.zh-CN.md)。
 
 ## 许可证
 

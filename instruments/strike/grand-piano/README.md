@@ -1,6 +1,6 @@
 # Grand piano / 三角钢琴
 
-`yinse:strike/grand-piano` · A0-C8 · 90 notes (every 3 semitones, 3 velocities) · about 430 KB
+`yinse:strike/grand-piano` · A0-C8 · 90 notes (every 3 semitones, 3 velocities) · about 600 KB
 
 Extracted from the **Salamander Grand Piano** by **Alexander Holm** (a Yamaha C5), published under
 [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), in the FreePats SFZ+FLAC edition
@@ -18,10 +18,13 @@ shared under the same license: credit Alexander Holm (Salamander Grand Piano) wh
 - Notes stop when released (dampers, about 0.3 s); the clip's `pedal` holds them. 松键止音（约 0.3 秒），clip 的 `pedal` 踩住就继续响。
 - Velocity 0-1 blends the three recorded layers; below the softest and above the loudest the level follows the velocity.
   力度在三层录音之间插值。
-- Not extracted: the hammer and key release noises and the resonance of the whole string set under the pedal.
-  没有提取：击弦与松键的机械声、踩踏板时整套弦的共鸣。
+- The hammer's knock is in it (attack noise in ten octave bands). Not extracted: the key release noise and the resonance
+  of the whole string set under the pedal. 击弦那一下的声音有（分十个频段的起音噪声）；没有提取：松键的机械声、踩踏板时整套弦的共鸣。
 
 ## How close / 和原采样差多少
 
-`muser yinse compare` on the 90 notes: mean spectral difference 3.77 dB (third-octave bands, first 2 s, loudness matched);
-2-3 dB in the bass and middle, the most at C8 (about 10 dB, where only one partial is measured).
+`muser yinse compare --between` on the 90 notes: mean spectral difference 2.66 dB (third-octave bands, first 2 s, loudness
+matched): 1.5 dB in the bass, about 3 dB in the middle, 3.6 dB above A6. Level within about 1 dB of the samples below
+C6; 2-3 dB quieter from C6 up and 6 dB quieter at F#7 (over the first 2 s): the first 10 ms of the top notes are louder
+in the samples than the partial tables can follow. Pitches blended from their neighbours (not recorded ones): 4.0 dB.
+The steady low rumble in the samples is left out on purpose.
